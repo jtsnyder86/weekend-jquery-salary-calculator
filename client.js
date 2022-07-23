@@ -2,10 +2,14 @@ console.log('client.js is running');
 
 $(document).ready(calculateNow);
 
+let monthlyTotal = 0
+
 function calculateNow() {  // this is our base function to call jquery
     console.log('calculateNow is working'); // this is checking for functionality -- works!
     // adds the employee info to table in dom
     $('#submitBtn').on('click', addEE)
+    // add the salaries to calculate monthly total
+
     //deletes information added (currently does NOT remove salary from monthly total)
     $('#container').on('click', '.dleteBtn', removeEntry)
 
@@ -21,7 +25,6 @@ function addEE() {
     let id = $('#idInput').val();
     let title = $('#titleInput').val();
     let annualSalary = Number($('#salaryInput').val());
-
 
 
     // console.log(first,last, id, title, annualSalary);
@@ -41,9 +44,19 @@ function addEE() {
             $('#lastInput').val('');
             $('#idInput').val('');
             $('#titleInput').val('');
-            $('#salaryInput').val('')
+            $('#salaryInput').val('');
 
+            monthlyTotal += annualSalary/12
+            console.log(monthlyTotal);
+            $('#monthlyTotal').empty()
+            $('#monthlyTotal').append(Math.round(monthlyTotal))
+
+            if(monthlyTotal > 20000){
+                $('#monthlyTotal').addClass('red')
+            }
 }
+
+
 
 function removeEntry() {
     console.log('time to remove!');
