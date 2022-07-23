@@ -18,9 +18,18 @@ function addEE() {
     let last = $('#lastInput').val();
     let id = $('#idInput').val();
     let title = $('#titleInput').val();
-    let annualSalary = $('#salaryInput').val();
+    let annualSalary = Number($('#salaryInput').val());
 
     console.log(first,last, id, title, annualSalary);
 
-    
+    $('#container').append(`
+        <tr>
+            <td>${first}</td>
+            <td>${last}</td>
+            <td>${id}</td>
+            <td>${title}</td>
+            <td>$${annualSalary}</td>
+        <tr/>
+            `);
+
 }

@@ -1,6 +1,23 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 header{
     text-align: center;
     font-size: 50px;
     font-family: Arial, Helvetica, sans-serif;
     
+}
+thead{
+    background-color: lightgray;
+
+}
+th{
+    padding-left: 5px;
+    padding-right: 45px;
+    text-align: left;
+    
+}
+td{
+    background-color: peachpuff;
 }
