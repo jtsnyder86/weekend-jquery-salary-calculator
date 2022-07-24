@@ -56,7 +56,7 @@ th{
     height: 30px;
     text-align: center;
     font-size: larger;
-    padding-left: 150px;
+    /* padding-left: 150px; */
 }
 .red{
     color: red;
