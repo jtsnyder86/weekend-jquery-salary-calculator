@@ -15,13 +15,14 @@
         <h1>Add Employees</h1>
     </div>
     <div class="inputs">
+        <!-- <i class="fa fa-user icon"></i> -->
         <input type="text" placeholder="First Name" id="firstInput">
         <input type="text" placeholder="Last Name" id="lastInput">
         <input type="text" placeholder="Employee ID" id="idInput">
         <input type="text" placeholder="Job Title" id="titleInput">
         <input type="number" placeholder="Annual Salary" id="salaryInput">
     </div>
-    <div class="button">
+    <div class="submitBtn">
         <button id="submitBtn">Submit</button>
     </div>
     <div>
@@ -37,13 +38,19 @@
                     <th>ID</th>
                     <th>Title</th>
                     <th>Annual Salary</th>
-                    <th></th>
+                    <th>Remove Employee</th>
                 </tr>
             </thead>
             <tbody id="container">
                 <!-- jquery will input stuff here!!!!! -->
             </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="6" id="tableFooter"></td>
+                </tr>
+            </tfoot>
         </table>
+        
     </div>
     <div>
         <h1>Total Monthly: $<span id="monthlyTotal">0</span></h1>

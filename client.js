@@ -30,13 +30,13 @@ function addEE() {
     // console.log(first,last, id, title, annualSalary);
     //appending to add the input data into the table
     $('#container').append(`
-        <tr>
-            <td>${first}</td>
-            <td>${last}</td>
-            <td>${id}</td>
-            <td>${title}</td>
-            <td>$${annualSalary}</td>
-            <td><button class="dleteBtn">Delete<td>
+        <tr class="addedRows">
+            <td class="addedRows">${first}</td>
+            <td class="addedRows">${last}</td>
+            <td class="addedRows">${id}</td>
+            <td class="addedRows">${title}</td>
+            <td class="addedRows">$${annualSalary}</td>
+            <td class="addedRows"><button class="dleteBtn">Delete</td>
         <tr/>
             `);
             // empty the input
@@ -45,12 +45,12 @@ function addEE() {
             $('#idInput').val('');
             $('#titleInput').val('');
             $('#salaryInput').val('');
-
+            // gathering the sum of annual salaries and calculating monthly total cost (rounding to two decimals)
             monthlyTotal += annualSalary/12
             console.log(monthlyTotal);
             $('#monthlyTotal').empty()
-            $('#monthlyTotal').append(Math.round(monthlyTotal))
-
+            $('#monthlyTotal').append(monthlyTotal.toFixed(2))
+            // Color alert for monthly cost exceeding $20,000
             if(monthlyTotal > 20000){
                 $('#monthlyTotal').addClass('red')
             }

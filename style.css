@@ -5,12 +5,34 @@ body{
 
 header{
     text-align: center;
+    color: lavender;
     font-size: 50px;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: gray;
     
 }
+input{
+    margin: 5px;
+    height: 25px;
+    border: solid cornflowerblue;
+    border-radius: 10em;
+}
+#submitBtn{
+    margin: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: fit-content;
+    height: 25px;
+    border-radius: 10em;
+    cursor: pointer;
+}
+/*.submitBtn{
+    text-align: right;
+    padding-inline-end: 50em;
+} */
 table{
     width: 100%;
+    border-collapse: collapse;
 }
 thead{
     background-color: lightgray;
@@ -19,14 +41,30 @@ thead{
 th{
     padding-left: 5px;
     text-align: left;
+    border: solid black 1px;
     
 }
-td{
-    background-color: peachpuff;
+.addedRows{
+    padding-top: 10px;
+    padding-bottom: 5px;
+    background-color:lavenderblush;
+    border-bottom: solid black 1px;
 }
-tfoot{
-    background-color: lightgreen;
+#tableFooter{
+    border-bottom: solid black 1px;
+    background-color: lavenderblush;
+    height: 30px;
 }
 .red{
     color: red;
 }
+.dleteBtn{
+    border-radius: 10em;
+}
+/* .icon {
+    padding: 10px;
+    background: dodgerblue;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+  } */
