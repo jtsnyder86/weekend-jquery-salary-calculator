@@ -48,12 +48,15 @@ th{
     padding-top: 10px;
     padding-bottom: 5px;
     background-color:lavenderblush;
-    border-bottom: solid black 1px;
+    border: solid black 1px;    
 }
 #tableFooter{
-    border-bottom: solid black 1px;
+    border: solid black 1px;
     background-color: lavenderblush;
     height: 30px;
+    text-align: center;
+    font-size: larger;
+    padding-left: 150px;
 }
 .red{
     color: red;

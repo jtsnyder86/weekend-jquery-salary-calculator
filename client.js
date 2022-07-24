@@ -49,7 +49,7 @@ function addEE() {
             monthlyTotal += annualSalary/12
             console.log(monthlyTotal);
             $('#monthlyTotal').empty()
-            $('#monthlyTotal').append(monthlyTotal.toFixed(2))
+            $('#monthlyTotal').append('$', monthlyTotal.toFixed(2))
             // Color alert for monthly cost exceeding $20,000
             if(monthlyTotal > 20000){
                 $('#monthlyTotal').addClass('red')
